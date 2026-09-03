@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Veterinaria San Marcos</title>
+  <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+  <header class="cabecera-sitio">
+    <a class="marca" href="index.html">Veterinaria San Marcos</a>
+    <nav id="menu-principal" class="menu">
+      <a href="index.html">Home</a>
+      <a href="productos.html">Productos</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="blogs.html">Blogs</a>
+      <a href="contacto.html" aria-current="page">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="contenido-principal" style="display: flex; justify-content: center;">
+    <div style="width: 100%; max-width: 32rem;">
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <p class="etiqueta">Canal Directo</p>
+        <h1>FORMULARIO DE CONTACTO</h1>
+      </div>
+
+      <form id="formulario-contacto" class="formulario" novalidate>
+        <div class="campo-formulario">
+          <label for="nombre-contacto">Nombre completo</label>
+          <input id="nombre-contacto" type="text" maxlength="100" required>
+          <small id="error-nombre-contacto" class="mensaje-error"></small>
+        </div>
+
+        <div class="campo-formulario">
+          <label for="correo-contacto">Correo</label>
+          <input id="correo-contacto" type="email" maxlength="100" placeholder="usuario@duoc.cl" required>
+          <small id="error-correo-contacto" class="mensaje-error"></small>
+        </div>
+
+        <div class="campo-formulario">
+          <label for="comentario-contacto">Comentario / Mensaje</label>
+          <textarea id="comentario-contacto" rows="5" maxlength="500" required></textarea>
+          <small id="error-comentario-contacto" class="mensaje-error"></small>
+        </div>
+
+        <button type="submit" class="boton" style="width: 100%;">ENVIAR MENSAJE</button>
+        <p id="mensaje-contacto" role="status" style="text-align: center; margin-top: 1rem;"></p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="pie-sitio">
+    <p>&copy; 2026 Veterinaria San Marcos</p>
+  </footer>
+
+  <script src="assets/js/contacto.js"></script>
+</body>
+</html>
