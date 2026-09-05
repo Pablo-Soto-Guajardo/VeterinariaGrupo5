@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Administrativo | Veterinaria San Marcos</title>
+  <link rel="stylesheet" href="../assets/css/estilos.css">
+</head>
+<body>
+  <div class="layout-admin">
+    <aside class="sidebar-admin">
+      <h2>San Marcos Admin</h2>
+      <ul>
+        <li><a href="index.html" class="activo">Dashboard</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="nuevo-producto.html">Nuevo Producto</a></li>
+        <li><a href="usuarios.html">Usuarios</a></li>
+        <li><a href="nuevo-usuario.html">Nuevo Usuario</a></li>
+        <li><a href="../index.html">Ir a la Tienda</a></li>
+      </ul>
+    </aside>
+
+    <main class="contenido-admin">
+      <header style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--color-borde); padding-bottom: 1rem;">
+        <h1>¡HOLA Administrador!</h1>
+        <span> Notificaciones clínicas</span>
+      </header>
+
+      <section style="margin-top: 2rem;">
+        <h2>Panel de Control</h2>
+        <p>Módulo de gestión para inventario de farmacia veterinaria y cuentas de usuarios.</p>
+        <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+          <a href="nuevo-producto.html" class="boton">Crear Producto</a>
+          <a href="nuevo-usuario.html" class="boton boton--secundario">Crear Usuario</a>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

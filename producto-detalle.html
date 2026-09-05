@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle del Producto | Veterinaria San Marcos</title>
+  <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+  <header class="cabecera-sitio">
+    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+      <a class="marca" href="index.html">Veterinaria San Marcos</a>
+      <a href="carrito.html" class="contador-carrito" style="color: #ffffff; font-weight: 700; text-decoration: none;">Cart (0)</a>
+    </div>
+    <nav id="menu-principal" class="menu">
+      <a href="index.html">Home</a>
+      <a href="productos.html">Productos</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="blogs.html">Blogs</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="contenido-principal">
+    <p><a href="productos.html">&larr; Volver al catálogo</a></p>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 2.5rem; margin-top: 1.5rem;">
+      <div style="flex: 1 1 20rem;">
+        <img id="detalle-img" src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=600&auto=format&fit=crop&q=60" alt="Producto">
+      </div>
+      <div style="flex: 1 1 20rem;">
+        <p id="detalle-cat" class="etiqueta">Antiparasitarios</p>
+        <h1 id="detalle-nombre">Nexgard (Afoxolaner)</h1>
+        <p id="detalle-precio" class="precio-producto">$9.500</p>
+        <p id="detalle-desc">Tratamiento y prevención de infestaciones por pulgas y garrapatas en perros.</p>
+        <p id="detalle-stock">Stock disponible: 60 unidades</p>
+
+        <div style="margin-top: 1.5rem; display: flex; gap: 1rem; align-items: center;">
+          <label for="cantidad-detalle">Cantidad:</label>
+          <input id="cantidad-detalle" type="number" value="1" min="1" max="10" style="width: 70px; padding: 0.5rem;">
+          <button id="btn-add-detalle" type="button" class="boton">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="pie-sitio">
+    <p>&copy; 2026 Veterinaria San Marcos</p>
+  </footer>
+
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/productos.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const codigo = urlParams.get("codigo") || "ME004";
+      let prod = null;
+      for (const p of catalogoSanMarcos) {
+        if (p.codigo === codigo) {
+          prod = p;
+          break;
+        }
+      }
+      if (prod) {
+        document.querySelector("#detalle-nombre").textContent = prod.nombre;
+        document.querySelector("#detalle-cat").textContent = prod.categoria;
+        document.querySelector("#detalle-precio").textContent = prod.precio === 0 ? "FREE" : `$${prod.precio.toLocaleString("es-CL")}`;
+        document.querySelector("#detalle-desc").textContent = prod.descripcion;
+        document.querySelector("#detalle-stock").textContent = `Stock disponible: ${prod.stock} unidades`;
+        document.querySelector("#detalle-img").src = prod.imagen;
+        document.querySelector("#detalle-img").alt = prod.nombre;
+
+        document.querySelector("#btn-add-detalle").addEventListener("click", function () {
+          const cant = parseInt(document.querySelector("#cantidad-detalle").value, 10) || 1;
+          agregarAlCarrito(prod.codigo, cant);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
