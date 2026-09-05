@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo completo de medicamentos y productos veterinarios en San Marcos.">
+  <title>Productos | Veterinaria San Marcos</title>
+  <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+  <header class="cabecera-sitio">
+    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+      <a class="marca" href="index.html">Veterinaria San Marcos</a>
+      <a href="carrito.html" class="contador-carrito" style="color: #ffffff; font-weight: 700; text-decoration: none;">Cart (0)</a>
+    </div>
+    <button id="boton-menu" class="boton-menu" type="button" aria-label="Abrir menú" aria-expanded="false">
+      <span aria-hidden="true">☰</span>
+    </button>
+    <nav id="menu-principal" class="menu">
+      <a href="index.html">Home</a>
+      <a href="productos.html" aria-current="page">Productos</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="blogs.html">Blogs</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="login.html">Iniciar sesión</a>
+      <a href="registro.html">Registrar usuario</a>
+    </nav>
+  </header>
+
+  <main id="contenido-principal">
+    <header style="margin-bottom: 2rem;">
+      <h1>PRODUCTOS Y MEDICAMENTOS</h1>
+      <p>Explora nuestro catálogo en stock de farmacia, suplementos y cuidados clínicos.</p>
+    </header>
+
+    <div id="catalogo-productos" class="grilla-tarjetas">
+      <!-- Carga dinámica vía JavaScript -->
+    </div>
+  </main>
+
+  <footer class="pie-sitio">
+    <p>&copy; 2026 Veterinaria San Marcos</p>
+  </footer>
+
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/productos.js"></script>
+</body>
+</html>
