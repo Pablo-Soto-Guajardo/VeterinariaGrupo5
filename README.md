@@ -4,8 +4,9 @@ Proyecto incremental desarrollado para la asignatura Desarrollo FullStack II (DS
 Consiste en el diseno y maquetacion de una plataforma web para la gestion de citas clinicas y catalogo de servicios de la Veterinaria San Marcos, ubicada en Rancagua.
 
 ## Integrantes
-*   [Escribe tu Nombre y Apellido]
-*   [Escribe el Nombre de tu Companero]
+*   Maximiliano Mondaca
+*   Pablo Soto
+*   Pascal Pacheco
 
 ## Estado del Proyecto (Fase de Estructura y Navegacion)
 En esta primera etapa se ha establecido el entorno inicial del proyecto junto con sus paginas principales:
