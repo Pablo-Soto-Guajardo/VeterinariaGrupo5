@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Carrito de Compras | Veterinaria San Marcos</title>
+  <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+  <header class="cabecera-sitio">
+    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+      <a class="marca" href="index.html">Veterinaria San Marcos</a>
+      <span class="contador-carrito" style="color: #ffffff; font-weight: 700;">Cart (0)</span>
+    </div>
+    <nav id="menu-principal" class="menu">
+      <a href="index.html">Home</a>
+      <a href="productos.html">Productos</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="blogs.html">Blogs</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="contenido-principal">
+    <h1>Mi carrito de compras</h1>
+    <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
+      <section id="lista-items-carrito" style="flex: 2 1 30rem; display: flex; flex-direction: column; gap: 1rem;">
+        <!-- Cargado por carrito.js -->
+      </section>
+
+      <aside style="flex: 1 1 18rem;" class="tarjeta">
+        <h2>Resumen del Pedido</h2>
+        <p style="font-size: 1.5rem; font-weight: 700;">TOTAL: <span id="total-carrito">$0</span></p>
+        <div style="margin-block: 1rem;">
+          <label for="cupon">Ingresa cupón de descuento</label>
+          <div style="display: flex; gap: 0.5rem; margin-top: 0.25rem;">
+            <input id="cupon" type="text" style="flex: 1; padding: 0.5rem;">
+            <button type="button" class="boton">APLICAR</button>
+          </div>
+        </div>
+        <button type="button" class="boton" style="background-color: #2a9d8f; width: 100%;">PAGAR</button>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="pie-sitio">
+    <p>&copy; 2026 Veterinaria San Marcos</p>
+  </footer>
+
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/productos.js"></script>
+  <script src="assets/js/carrito.js"></script>
+</body>
+</html>

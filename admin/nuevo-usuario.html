@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuevo Usuario | Administración</title>
+  <link rel="stylesheet" href="../assets/css/estilos.css">
+</head>
+<body>
+  <div class="layout-admin">
+    <aside class="sidebar-admin">
+      <h2>San Marcos Admin</h2>
+      <ul>
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="usuarios.html">Usuarios</a></li>
+        <li><a href="nuevo-usuario.html" class="activo">Nuevo Usuario</a></li>
+      </ul>
+    </aside>
+
+    <main class="contenido-admin">
+      <h1>NUEVO USUARIO (ADMINISTRADOR)</h1>
+
+      <form id="formulario-registro" class="formulario" novalidate style="max-width: 48rem;">
+        <div class="campo-formulario">
+          <label for="rol-usuario">Tipo de Usuario (Rol del Sistema)</label>
+          <select id="rol-usuario" name="rol" required>
+            <option value="">-- Seleccionar Rol --</option>
+            <option value="Administrador">Administrador (Acceso Total)</option>
+            <option value="Recepcionista">Recepcionista / Operador (Citas y Fichas)</option>
+            <option value="Cliente">Cliente (Dueño de Mascota)</option>
+          </select>
+        </div>
+
+        <div class="campo-formulario">
+          <label for="rut">RUN (sin puntos ni guion)</label>
+          <input id="rut" name="rut" type="text" maxlength="9" placeholder="19011022K" required>
+          <small id="error-rut" class="mensaje-error"></small>
+        </div>
+
+        <div class="campo-formulario">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" maxlength="50" required>
+          <small id="error-nombre" class="mensaje-error"></small>
+        </div>
+
+        <div class="campo-formulario">
+          <label for="apellidos">Apellidos</label>
+          <input id="apellidos" name="apellidos" type="text" maxlength="100" required>
+          <small id="error-apellidos" class="mensaje-error"></small>
+        </div>
+
+        <div class="campo-formulario">
+          <label for="correo">Correo Electrónico</label>
+          <input id="correo" name="correo" type="email" placeholder="usuario@duoc.cl" required>
+          <small id="error-correo" class="mensaje-error"></small>
+        </div>
+
+        <div class="campo-formulario">
+          <label for="direccion">Dirección</label>
+          <input id="direccion" name="direccion" type="text" maxlength="300" required>
+          <small id="error-direccion" class="mensaje-error"></small>
+        </div>
+
+        <div class="campo-formulario">
+          <label for="region">Región</label>
+          <select id="region" name="region" required>
+            <option value="">-- Seleccione Región --</option>
+          </select>
+        </div>
+
+        <div class="campo-formulario">
+          <label for="comuna">Comuna</label>
+          <select id="comuna" name="comuna" required>
+            <option value="">-- Seleccione Comuna --</option>
+          </select>
+        </div>
+
+        <div class="campo-formulario">
+          <label for="fecha-nacimiento">Fecha de Nacimiento</label>
+          <input id="fecha-nacimiento" name="fechaNacimiento" type="date">
+          <small id="error-fecha" class="mensaje-error"></small>
+        </div>
+
+        <div class="campo-formulario">
+          <label for="contrasena">Contraseña</label>
+          <input id="contrasena" name="contrasena" type="password" required>
+          <small id="error-contrasena" class="mensaje-error"></small>
+        </div>
+
+        <div class="campo-formulario">
+          <label for="confirmar-contrasena">Confirmar Contraseña</label>
+          <input id="confirmar-contrasena" name="confirmarContrasena" type="password" required>
+          <small id="error-confirmar-contrasena" class="mensaje-error"></small>
+        </div>
+
+        <button type="submit" class="boton">CREAR USUARIO</button>
+        <p id="mensaje-exito" role="status"></p>
+      </form>
+    </main>
+  </div>
+
+  <script src="../assets/js/data-regiones.js"></script>
+  <script src="../assets/js/registro.js"></script>
+</body>
+</html>

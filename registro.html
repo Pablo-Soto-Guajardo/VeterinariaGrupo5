@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Usuario | Veterinaria San Marcos</title>
+  <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+  <header class="cabecera-sitio">
+    <a class="marca" href="index.html">Veterinaria San Marcos</a>
+    <nav id="menu-principal" class="menu">
+      <a href="index.html">Home</a>
+      <a href="productos.html">Productos</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="blogs.html">Blogs</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="login.html">Iniciar sesión</a>
+      <a href="registro.html" aria-current="page">Registrar usuario</a>
+    </nav>
+  </header>
+
+  <main id="contenido-principal">
+    <header style="margin-bottom: 2rem;">
+      <h1>Registro de Usuario / Tutor</h1>
+      <p>Ingrese sus antecedentes personales para aperturar la cuenta clínica.</p>
+    </header>
+
+    <form id="formulario-registro" class="formulario" novalidate>
+      <div class="campo-formulario">
+        <label for="rut">RUN (sin puntos ni guion)</label>
+        <input id="rut" name="rut" type="text" maxlength="9" placeholder="19011022K" required>
+        <small id="error-rut" class="mensaje-error"></small>
+      </div>
+
+      <div class="campo-formulario">
+        <label for="nombre">Nombre</label>
+        <input id="nombre" name="nombre" type="text" maxlength="50" required>
+        <small id="error-nombre" class="mensaje-error"></small>
+      </div>
+
+      <div class="campo-formulario">
+        <label for="apellidos">Apellidos</label>
+        <input id="apellidos" name="apellidos" type="text" maxlength="100" required>
+        <small id="error-apellidos" class="mensaje-error"></small>
+      </div>
+
+      <div class="campo-formulario">
+        <label for="correo">Correo Electrónico</label>
+        <input id="correo" name="correo" type="email" placeholder="usuario@duoc.cl" required>
+        <small id="error-correo" class="mensaje-error"></small>
+      </div>
+
+      <div class="campo-formulario">
+        <label for="direccion">Dirección</label>
+        <input id="direccion" name="direccion" type="text" maxlength="300" required>
+        <small id="error-direccion" class="mensaje-error"></small>
+      </div>
+
+      <div class="campo-formulario">
+        <label for="region">Región</label>
+        <select id="region" name="region" required>
+          <option value="">-- Seleccione Región --</option>
+        </select>
+      </div>
+
+      <div class="campo-formulario">
+        <label for="comuna">Comuna</label>
+        <select id="comuna" name="comuna" required>
+          <option value="">-- Seleccione Comuna --</option>
+        </select>
+      </div>
+
+      <div class="campo-formulario">
+        <label for="fecha-nacimiento">Fecha de Nacimiento (Opcional)</label>
+        <input id="fecha-nacimiento" name="fechaNacimiento" type="date">
+        <small id="error-fecha" class="mensaje-error"></small>
+      </div>
+
+      <div class="campo-formulario">
+        <label for="contrasena">Contraseña (4 a 10 caracteres)</label>
+        <input id="contrasena" name="contrasena" type="password" required>
+        <small id="error-contrasena" class="mensaje-error"></small>
+      </div>
+
+      <div class="campo-formulario">
+        <label for="confirmar-contrasena">Confirmar Contraseña</label>
+        <input id="confirmar-contrasena" name="confirmarContrasena" type="password" required>
+        <small id="error-confirmar-contrasena" class="mensaje-error"></small>
+      </div>
+
+      <button type="submit" class="boton">REGISTRAR</button>
+      <p id="mensaje-exito" role="status"></p>
+    </form>
+  </main>
+
+  <footer class="pie-sitio">
+    <p>&copy; 2026 Veterinaria San Marcos</p>
+  </footer>
+
+  <script src="assets/js/data-regiones.js"></script>
+  <script src="assets/js/registro.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión | Veterinaria San Marcos</title>
+  <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+  <header class="cabecera-sitio">
+    <a class="marca" href="index.html">Veterinaria San Marcos</a>
+    <nav id="menu-principal" class="menu">
+      <a href="index.html">Home</a>
+      <a href="productos.html">Productos</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="login.html" aria-current="page">Iniciar sesión</a>
+      <a href="registro.html">Registrar usuario</a>
+    </nav>
+  </header>
+
+  <main id="contenido-principal" style="display: flex; justify-content: center;">
+    <div style="width: 100%; max-width: 28rem;">
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <p class="etiqueta">Acceso al Sistema</p>
+        <h1>Iniciar sesión</h1>
+      </div>
+
+      <form id="formulario-login" class="formulario" novalidate>
+        <div class="campo-formulario">
+          <label for="correo-login">Correo</label>
+          <input id="correo-login" type="email" placeholder="ejemplo@duoc.cl" required>
+          <small id="error-correo-login" class="mensaje-error"></small>
+        </div>
+
+        <div class="campo-formulario">
+          <label for="pass-login">Contraseña</label>
+          <input id="pass-login" type="password" placeholder="Entre 4 y 10 caracteres" required>
+          <small id="error-pass-login" class="mensaje-error"></small>
+        </div>
+
+        <button type="submit" class="boton" style="width: 100%;">Ingresar</button>
+        <p id="mensaje-login" role="status" style="text-align: center; margin-top: 1rem;"></p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="pie-sitio">
+    <p>&copy; 2026 Veterinaria San Marcos</p>
+  </footer>
+
+  <script src="assets/js/login.js"></script>
+</body>
+</html>
