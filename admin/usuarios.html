@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usuarios del Sistema | Administración</title>
+  <link rel="stylesheet" href="../assets/css/estilos.css">
+</head>
+<body>
+  <div class="layout-admin">
+    <aside class="sidebar-admin">
+      <h2>San Marcos Admin</h2>
+      <ul>
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="nuevo-producto.html">Nuevo Producto</a></li>
+        <li><a href="usuarios.html" class="activo">Usuarios</a></li>
+        <li><a href="nuevo-usuario.html">Nuevo Usuario</a></li>
+      </ul>
+    </aside>
+
+    <main class="contenido-admin">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h1>Usuarios Registrados</h1>
+        <a href="nuevo-usuario.html" class="boton">NUEVO USUARIO</a>
+      </div>
+
+      <div class="tabla-contenedor" tabindex="0">
+        <table>
+          <caption>Listado de personal clínico y tutores</caption>
+          <thead>
+            <tr>
+              <th scope="col">RUN</th>
+              <th scope="col">Nombre Completo</th>
+              <th scope="col">Correo</th>
+              <th scope="col">Rol</th>
+              <th scope="col">Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">19011022K</th>
+              <td>Pablo Soto Guajardo</td>
+              <td>pablo.soto@duoc.cl</td>
+              <td>Administrador</td>
+              <td><a href="nuevo-usuario.html" class="boton">Editar</a></td>
+            </tr>
+            <tr>
+              <th scope="row">142234568</th>
+              <td>Camila Valenzuela</td>
+              <td>recepcion@veterinariasanmarcos.cl</td>
+              <td>Recepcionista</td>
+              <td><a href="nuevo-usuario.html" class="boton">Editar</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

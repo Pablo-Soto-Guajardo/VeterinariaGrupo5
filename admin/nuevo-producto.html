@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listado de Productos | Administración</title>
+  <link rel="stylesheet" href="../assets/css/estilos.css">
+</head>
+<body>
+  <div class="layout-admin">
+    <aside class="sidebar-admin">
+      <h2>San Marcos Admin</h2>
+      <ul>
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="productos.html" class="activo">Productos</a></li>
+        <li><a href="nuevo-producto.html">Nuevo Producto</a></li>
+        <li><a href="usuarios.html">Usuarios</a></li>
+        <li><a href="nuevo-usuario.html">Nuevo Usuario</a></li>
+        <li><a href="../index.html">Ir a la Tienda</a></li>
+      </ul>
+    </aside>
+
+    <main class="contenido-admin">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h1>Productos en Inventario</h1>
+        <a href="nuevo-producto.html" class="boton">NUEVO PRODUCTO</a>
+      </div>
+
+      <div class="tabla-contenedor" tabindex="0">
+        <table>
+          <caption>Inventario de medicamentos y artículos clínicos en stock</caption>
+          <thead>
+            <tr>
+              <th scope="col">Código</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Categoría</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Stock</th>
+              <th scope="col">Stock Crítico</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">ME004</th>
+              <td>Nexgard (Afoxolaner)</td>
+              <td>Antiparasitarios</td>
+              <td>$9.500</td>
+              <td>60</td>
+              <td>10</td>
+              <td><a href="nuevo-producto.html" class="boton">Editar</a></td>
+            </tr>
+            <tr>
+              <th scope="row">ME005</th>
+              <td>Bravecto (Fluralaner)</td>
+              <td>Antiparasitarios</td>
+              <td>$18.900</td>
+              <td>8</td>
+              <td>10</td>
+              <td><a href="nuevo-producto.html" class="boton">Editar</a></td>
+            </tr>
+            <tr>
+              <th scope="row">ME011</th>
+              <td>Clorhexidina shampoo 2%</td>
+              <td>Dermatología</td>
+              <td>$8.900</td>
+              <td>0</td>
+              <td>5</td>
+              <td><a href="nuevo-producto.html" class="boton">Editar</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
