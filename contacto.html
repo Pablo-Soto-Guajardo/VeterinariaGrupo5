@@ -3,34 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Detalle Blog 2 | Veterinaria San Marcos</title>
+  <meta name="description" content="Contáctate con el equipo clínico y veterinario de Veterinaria San Marcos. Atención de consultas y emergencias.">
+  <title>Contacto | Veterinaria San Marcos</title>
   <link rel="stylesheet" href="assets/css/estilos.css">
 </head>
 <body>
   <header class="cabecera-sitio">
-    <a class="marca" href="index.html">Veterinaria San Marcos</a>
+    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+      <a class="marca" href="index.html">Veterinaria San Marcos</a>
+      <a href="carrito.html" class="contador-carrito" style="color: #ffffff; font-weight: 700; text-decoration: none;">Carrito (0)</a>
+    </div>
+    <button id="boton-menu" class="boton-menu" type="button" aria-label="Abrir menú" aria-expanded="false">
+      <span aria-hidden="true">☰</span>
+    </button>
     <nav id="menu-principal" class="menu">
       <a href="index.html">Home</a>
+      <a href="productos.html">Productos</a>
+      <a href="nosotros.html">Nosotros</a>
       <a href="blogs.html">Blogs</a>
-      <a href="contacto.html">Contacto</a>
+      <a href="contacto.html" aria-current="page">Contacto</a>
+      <a href="login.html">Iniciar sesión</a>
+      <a href="registro.html">Registrar usuario</a>
     </nav>
   </header>
 
   <main id="contenido-principal">
-    <p><a href="blogs.html">&larr; Volver a noticias</a></p>
-    <article class="tarjeta" style="margin-top: 1rem;">
-      <p class="etiqueta">Dermatología Veterinaria</p>
-      <h1>Manejo de Alergias Cutáneas en Felinos</h1>
-      <p><small>Publicado el 20 de agosto de 2026 · Dra. Especialista Dérmica</small></p>
-      <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=700&auto=format&fit=crop&q=60" alt="Gato siendo examinado" style="max-height: 350px; object-fit: cover;">
-      
-      <p style="margin-top: 1.5rem;">El rascado excesivo o lamido compulsivo en gatos suele esconder problemas dérmicos relacionados con picaduras de pulga o alergias ambientales.</p>
-      <p>El uso de champús hipoalergénicos medicados con clorhexidina al 2% restaura la barrera lipídica y previene colonizaciones bacterianas secundarias.</p>
-    </article>
+    <header style="margin-bottom: 2rem;">
+      <h1>CONTÁCTANOS</h1>
+      <p>Estamos disponibles para resolver consultas sobre pacientes, recetas veterinarias o agendamiento de servicios clínicos.</p>
+    </header>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; align-items: start;">
+      <!-- Información directa de contacto -->
+      <section class="tarjeta" aria-label="Información de atención">
+        <h2>Canales de Atención</h2>
+        <p><strong>Ubicación:</strong> Av. San Marcos 1420, Santiago</p>
+        <p><strong>Urgencias 24/7:</strong> +56 2 2987 6543</p>
+        <p><strong>Consultas generales:</strong> contacto@veterinariosanmarcos.cl</p>
+        <p><strong>Horario clínico:</strong> Lunes a Sábado de 08:30 a 20:00 hrs.</p>
+        
+        <hr style="border: 0; border-top: 1px solid var(--color-borde); margin: 1.5rem 0;">
+        
+        <h3>Turnos de Urgencia</h3>
+        <p>Para emergencias médicas fuera del horario de consulta regular, acude directamente a nuestro pabellón central con el carnet de vacunación del paciente.</p>
+      </section>
+
+      <!-- Formulario de contacto -->
+      <section aria-label="Formulario de mensaje">
+        <form id="formulario-contacto" class="formulario" novalidate>
+          <div class="campo-formulario">
+            <label for="nombre-contacto">Nombre completo</label>
+            <input type="text" id="nombre-contacto" name="nombre" placeholder="Ej. Camila Morales" required>
+            <span id="error-nombre-contacto" class="mensaje-error" aria-live="polite"></span>
+          </div>
+
+          <div class="campo-formulario">
+            <label for="correo-contacto">Correo electrónico</label>
+            <input type="email" id="correo-contacto" name="correo" placeholder="usuario@duoc.cl" required>
+            <span id="error-correo-contacto" class="mensaje-error" aria-live="polite"></span>
+          </div>
+
+          <div class="campo-formulario">
+            <label for="comentario-contacto">Comentario o consulta clínica</label>
+            <textarea id="comentario-contacto" name="comentario" rows="4" placeholder="Indica especie, edad y consulta..." required></textarea>
+            <span id="error-comentario-contacto" class="mensaje-error" aria-live="polite"></span>
+          </div>
+
+          <button type="submit" class="boton">Enviar mensaje</button>
+          <div id="mensaje-contacto" style="margin-top: 1rem; font-weight: bold;" aria-live="polite"></div>
+        </form>
+      </section>
+    </div>
   </main>
 
   <footer class="pie-sitio">
     <p>&copy; 2026 Veterinaria San Marcos</p>
   </footer>
+
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/contacto.js"></script>
 </body>
 </html>

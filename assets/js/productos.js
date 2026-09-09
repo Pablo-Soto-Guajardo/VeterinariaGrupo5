@@ -86,7 +86,7 @@ function actualizarBadgeCarrito() {
     total += item.cantidad;
   }
   for (const b of badges) {
-    b.textContent = `Cart (${total})`;
+    b.textContent = `Carrito (${total})`;
   }
 }
 
